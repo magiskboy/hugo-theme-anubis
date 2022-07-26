@@ -12,6 +12,7 @@
     <a href="{{ .Site.BaseURL }}" class="p-name p-author post-hidden-author h-card" rel="me">{{ .Params.author | default .Site.Params.author }}</a>
 
 
+    {{ if .Site.Params.showTaxonomies }}
     <div class="post-taxonomies">
         {{ if .Params.categories }}
             <ul class="post-categories">
@@ -30,4 +31,5 @@
                 </ul>
         {{ end }}
     </div>
+    {{ end }}
 </div>
